@@ -19,7 +19,7 @@ node(){
     }
 
     stage('Package Build') {
-        sh "tar -zcvf bundle.tar.gz dist/automationdemo/"
+        sh "tar -zcvf bundle.tar.gz dist/UIJenkinsDemo/"
     }
 
     stage('Artifacts Creation') {
@@ -33,7 +33,7 @@ node(){
     }
 }
 
-node('awsnode') {
+node('JenkinsAWSNode') {
     echo 'Unstash'
     unstash 'buildArtifacts'
     echo 'Artifacts copied'
