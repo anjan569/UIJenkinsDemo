@@ -5,7 +5,6 @@ import { QuestionControlService } from "../question-control.services";
 @Component({
     selector: 'app-dynamic-form',
     templateUrl: './dynamic-form.component.html',
-    providers: [ QuestionControlService ]
   })
 export class DynamicFormComponent implements OnInit {
     
