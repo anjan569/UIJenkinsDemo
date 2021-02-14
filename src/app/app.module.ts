@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DynamicFormComponent } from './components/dynamicForm/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './components/dynamicFormQuestions/dynamic-form-question.component';
+import { QuestionService } from './questions.services';
+import { QuestionControlService } from './components/question-control.services';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent
+
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [QuestionService, QuestionControlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
