@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "UIJenkinsDemo1:build"
+            "browserTarget": "UIJenkinsDemo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "UIJenkinsDemo1:build:production"
+              "browserTarget": "UIJenkinsDemo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "UIJenkinsDemo1:build"
+            "browserTarget": "UIJenkinsDemo:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "UIJenkinsDemo1:serve"
+            "devServerTarget": "UIJenkinsDemo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "UIJenkinsDemo1:serve:production"
+              "devServerTarget": "UIJenkinsDemo:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "UIJenkinsDemo1"
+  "defaultProject": "UIJenkinsDemo"
 }
