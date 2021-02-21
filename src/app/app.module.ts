@@ -8,12 +8,14 @@ import { DynamicFormComponent } from './components/dynamicForm/dynamic-form.comp
 import { DynamicFormQuestionComponent } from './components/dynamicFormQuestions/dynamic-form-question.component';
 import { QuestionService } from './questions.services';
 import { QuestionControlService } from './components/question-control.services';
+import { SocialMediaComponent } from './components/socialmedia/socialmedia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicFormComponent,
-    DynamicFormQuestionComponent
+    DynamicFormQuestionComponent,
+    SocialMediaComponent
 
   ],
   imports: [

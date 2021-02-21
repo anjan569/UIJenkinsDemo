@@ -1,0 +1,22 @@
+<div class="social-media" [ngClass]="{'vertical':vertical}">
+    <div *ngIf="facebook" class="social-media-icon">
+        <!-- <a [href]="facebookLink + facebook.link" target="_blank" rel="noopener" title="view {{ facebook.user }} on facebook"><img src="/assets/images/svgs/facebook.svg" alt="facebook icon"></a> -->
+        <a [href]="facebookLink + facebook.link" target="_blank" rel="noopener" title="view {{ facebook.user }} on facebook">FB</a>
+    </div>
+    <div *ngIf="twitter" class="social-media-icon">
+        <!-- <a [href]="twitterLink + twitter.link" target="_blank" rel="noopener" title="view {{ twitter.user }} on twitter"><img src="/assets/images/svgs/twitter.svg" alt="twitter icon"></a> -->
+        <a [href]="twitterLink + twitter.link" target="_blank" rel="noopener" title="view {{ twitter.user }} on twitter">twitter</a>
+    </div>
+    <div *ngIf="linkedIn" class="social-media-icon">
+            <!-- <a *ngIf="linkedIn.company; else altLinkedIn" [href]="linkedInLinkCompany + linkedIn.link" target="_blank" rel="noopener" title="view {{ linkedIn.user }} on twitter"><img src="/assets/images/svgs/linkedin.svg" alt="linkedIn icon"></a>  -->
+        <a *ngIf="linkedIn.company; else altLinkedIn" [href]="linkedInLinkCompany + linkedIn.link" target="_blank" rel="noopener" title="view {{ linkedIn.user }} on twitter">linkedIn</a> 
+        <ng-template #altLinkedIn>
+                <a [href]="linkedInLink + linkedIn.link" target="_blank" rel="noopener" title="view {{ linkedIn.user }} on twitter"><img src="/assets/images/svgs/linkedin.svg" alt="linkedIn icon"></a>
+            <a [href]="linkedInLink + linkedIn.link" target="_blank" rel="noopener" title="view {{ linkedIn.user }} on twitter"><LinkedIn</a>
+        </ng-template>
+    </div>
+    <div *ngIf="medium" class="social-media-icon">
+        <!-- <a [href]="mediumLink + medium.link" target="_blank" rel="noopener" title="view {{ medium.user }} on medium"><img src="/assets/images/svgs/medium.svg" alt="medium icon"></a> -->
+        <a [href]="mediumLink + medium.link" target="_blank" rel="noopener" title="view {{ medium.user }} on medium">Media</a>
+    </div>
+    <!-- </div> -->
